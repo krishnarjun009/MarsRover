@@ -2,7 +2,7 @@
 
 namespace MarsRoverPuzzle
 {
-    public sealed class DirectionMap
+    public sealed class DirectionParser
     {
         private static readonly Dictionary<char, Direction> directionMap = new Dictionary<char, Direction>()
         {
