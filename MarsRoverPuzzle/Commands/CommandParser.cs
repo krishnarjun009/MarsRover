@@ -2,9 +2,9 @@
 
 namespace MarsRoverPuzzle.Commands
 {
-    public class CommandParser
+    public sealed class CommandParser
     {
-        private static Dictionary<char, ICommand<IRover>> commandMap = new Dictionary<char, ICommand<IRover>>()
+        private readonly static Dictionary<char, ICommand<IRover>> commandMap = new Dictionary<char, ICommand<IRover>>()
         {
             {'L', new TurnLeftCommand()},
             {'R', new TurnRightCommand()},
