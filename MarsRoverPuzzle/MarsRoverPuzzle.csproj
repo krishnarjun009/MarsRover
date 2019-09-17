@@ -64,6 +64,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\MarsRover.cs" />
     <Compile Include="Tests\Commands\TestMoveCommand.cs" />
+    <Compile Include="Tests\Commands\TestTurnLeftCommand.cs" />
+    <Compile Include="Tests\Commands\TestTurnRightCommand.cs" />
     <Compile Include="Tests\TestCoordinate.cs" />
     <Compile Include="Tests\TestDirection.cs" />
     <Compile Include="Tests\TestMarsRover.cs" />
