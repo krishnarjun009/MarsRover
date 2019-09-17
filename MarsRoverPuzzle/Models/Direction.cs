@@ -16,6 +16,7 @@ namespace MarsRoverPuzzle
 
         public abstract Direction TurnLeft();
         public abstract Direction TurnRight();
+        public virtual string GetDirectionAsString() => x + " " + y + " " + head;
     }
 
     public class North : Direction

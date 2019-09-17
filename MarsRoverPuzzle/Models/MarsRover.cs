@@ -8,8 +8,7 @@ namespace MarsRoverPuzzle
         void TurnRight();
         void TurnLeft();
         void Move();
-        Direction GetCurrentDirection();
-        Coordinate GetCurrentPosition();
+        string GetCurrentLocation();
     }
 
     public class MarsRover : IRover
@@ -34,19 +33,17 @@ namespace MarsRoverPuzzle
 
         public void TurnLeft() => this.currentDirection = this.currentDirection.TurnLeft();
         public void TurnRight() => this.currentDirection = this.currentDirection.TurnRight();
-        public Coordinate GetCurrentPosition() => this.currentCoordinate;
-        public Direction GetCurrentDirection() => this.currentDirection;
+
+        public string GetCurrentLocation() => this.ToString();
 
         public override string ToString()
         {
-            var direction = this.GetCurrentDirection();
-            var position = this.GetCurrentPosition();
             var builder = new System.Text.StringBuilder();
-            builder.Append(position.x)
+            builder.Append(currentCoordinate.x)
                     .Append(" ")
-                    .Append(position.y)
+                    .Append(currentCoordinate.y)
                     .Append(" ")
-                    .Append(direction.head);
+                    .Append(currentDirection.head);
             return builder.ToString();
         }
 
