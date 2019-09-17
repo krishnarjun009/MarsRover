@@ -9,7 +9,7 @@ namespace MarsRoverPuzzle.Tests
         {
             var plateau = new Plateau(5, 5);
             var coordinate = new Coordinate(3, 3);
-            var direction = DirectionMap.GetDirection('N');
+            var direction = DirectionParser.GetDirection('N');
             var rover = new MarsRover(plateau, coordinate, direction);
 
             Assert.AreEqual("3 3 N", rover.GetCurrentLocation());
@@ -20,7 +20,7 @@ namespace MarsRoverPuzzle.Tests
         {
             var plateau = new Plateau(5, 5);
             var coordinate = new Coordinate(1, 2);
-            var direction = DirectionMap.GetDirection('N');
+            var direction = DirectionParser.GetDirection('N');
             var rover = new MarsRover(plateau, coordinate, direction);
 
             rover.TurnLeft();
@@ -33,7 +33,7 @@ namespace MarsRoverPuzzle.Tests
         {
             var plateau = new Plateau(5, 5);
             var coordinate = new Coordinate(1, 2);
-            var direction = DirectionMap.GetDirection('N');
+            var direction = DirectionParser.GetDirection('N');
             var rover = new MarsRover(plateau, coordinate, direction);
 
             rover.TurnRight();
@@ -46,7 +46,7 @@ namespace MarsRoverPuzzle.Tests
         {
             var plateau = new Plateau(5, 5);
             var coordinate = new Coordinate(1, 2);
-            var direction = DirectionMap.GetDirection('N');
+            var direction = DirectionParser.GetDirection('N');
             var rover = new MarsRover(plateau, coordinate, direction);
 
             rover.Move();
@@ -59,7 +59,7 @@ namespace MarsRoverPuzzle.Tests
         {
             var plateau = new Plateau(5, 5);
             var coordinate = new Coordinate(1, 2);
-            var direction = DirectionMap.GetDirection('N');
+            var direction = DirectionParser.GetDirection('N');
             var rover = new MarsRover(plateau, coordinate, direction);
 
             string command = "M";
@@ -74,7 +74,7 @@ namespace MarsRoverPuzzle.Tests
         {
             var plateau = new Plateau(5, 5);
             var coordinate = new Coordinate(1, 2);
-            var direction = DirectionMap.GetDirection('N');
+            var direction = DirectionParser.GetDirection('N');
             var rover = new MarsRover(plateau, coordinate, direction);
 
             string command = "LMLMLMLMM";
@@ -89,7 +89,7 @@ namespace MarsRoverPuzzle.Tests
         {
             var plateau = new Plateau(5, 5  );
             var coordinate = new Coordinate(0, 4);
-            var direction = DirectionMap.GetDirection('N');
+            var direction = DirectionParser.GetDirection('N');
             var rover = new MarsRover(plateau, coordinate, direction);
 
             string command = "RM";
